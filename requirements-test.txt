@@ -1,0 +1,5 @@
+# Light dependencies for the test suite (no torch, no chromadb), so CI installs in seconds.
+pytest
+httpx
+fastapi
+google-genai

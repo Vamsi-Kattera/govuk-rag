@@ -1,0 +1,407 @@
+[
+  {
+    "question": "can i go outside uk on my graduate visa for a trip?",
+    "expected_answer": "Yes. A Graduate visa allows you to travel abroad and return to the UK.",
+    "gold_url": "https://www.gov.uk/graduate-visa",
+    "gold_chunk": "1-2",
+    "type": "in_scope",
+    "id": "q01"
+  },
+  {
+    "question": "Can I work full-time on a Graduate visa?",
+    "expected_answer": "A Graduate visa lets you work in most jobs and be self-employed.",
+    "gold_url": "https://www.gov.uk/graduate-visa",
+    "type": "in_scope",
+    "id": "q02"
+  },
+  {
+    "question": "What identity documents can I use to apply for the Ukraine Permission Extension scheme if I do not have a valid international passport?",
+    "expected_answer": "If you do not have a valid international passport and have a reasonable explanation, you can use a recently expired international passport, a valid or recently expired Ukrainian national identity card, a combination of official documents (like a photo driving licence and birth certificate) that establish your details, or an emergency certificate issued by a Ukrainian authority since March 2022.",
+    "gold_url": "https://www.gov.uk/guidance/applying-to-the-ukraine-permission-extension-scheme",
+    "gold_chunk": "117-5",
+    "type": "in_scope",
+    "id": "q03"
+  },
+  {
+    "question": "What is the maximum statutory guarantee pay I can receive if I am laid off?",
+    "expected_answer": "The maximum statutory guarantee pay you can get is £41 a day for 5 days in any 3-month period, which is a maximum of £205. If you usually earn less than £41 a day, you will receive your normal daily rate, and part-time workers have their entitlement worked out proportionally.",
+    "gold_url": "https://www.gov.uk/lay-offs-short-timeworking",
+    "gold_chunk": "79-0",
+    "type": "in_scope",
+    "id": "q04"
+  },
+  {
+    "question": "How much is the weekly Child Benefit rate for an eldest or only child?",
+    "expected_answer": "The weekly Child Benefit rate for an eldest or only child is £27.05.",
+    "gold_url": "https://www.gov.uk/child-benefit",
+    "gold_chunk": "129-1",
+    "type": "in_scope",
+    "id": "q05"
+  },
+  {
+    "question": "Where should I post my printed form to if I need to request a copy of my National Insurance number by post?",
+    "expected_answer": "You should send the printed and signed form, along with your identity confirmation documents, to: National Insurance contributions and Employers Office, HM Revenue and Customs, BX9 1AN.",
+    "gold_url": "https://www.gov.uk/guidance/get-your-national-insurance-number-by-post",
+    "gold_chunk": "101-0",
+    "type": "in_scope",
+    "id": "q06"
+  },
+  {
+    "question": "When does UK Visas and Immigration start processing a visa application made outside the UK?",
+    "expected_answer": "UKVI starts processing your application once you either verify your identity and submit your application and documents online using the UK Immigration: ID Check app, or attend your appointment at a visa application centre to provide your fingerprints and photograph.",
+    "gold_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
+    "gold_chunk": "4-0",
+    "type": "in_scope",
+    "id": "q07"
+  },
+  {
+    "question": "Can I get Statutory Sick Pay if I am off work due to bereavement?",
+    "expected_answer": "Bereavement itself is not an incapacity, but you may be suffering from shock, depression, or anxiety due to the loss. Statutory Sick Pay is only payable if your employer takes into account your circumstances and decides to accept this as an acceptable reason for incapacity.",
+    "gold_url": "https://www.gov.uk/guidance/statutory-sick-pay-employee-fitness-to-work",
+    "gold_chunk": "55-1",
+    "type": "in_scope",
+    "id": "q08"
+  },
+  {
+    "question": "How long do employers need to keep copies of an employee's right to work documents?",
+    "expected_answer": "You must keep copies of the right to work documents during the applicant’s employment and for 2 years after they stop working for you.",
+    "gold_url": "https://www.gov.uk/check-job-applicant-right-to-work",
+    "gold_chunk": "26-1",
+    "type": "in_scope",
+    "id": "q09"
+  },
+  {
+    "question": "How are variable working hours averaged when calculating redundancy pay and holiday pay?",
+    "expected_answer": "If your weekly working hours varied, an average across 12 weeks is used for redundancy pay, arrears of pay, and notice pay. For holiday pay, an average is taken over 52 weeks.",
+    "gold_url": "https://www.gov.uk/guidance/explaining-your-redundancy-payments",
+    "gold_chunk": "76-1",
+    "type": "in_scope",
+    "id": "q10"
+  },
+  {
+    "question": "How much does it cost to register for the DBS Update Service if I am not a volunteer?",
+    "expected_answer": "It costs £15 per year to register for the DBS Update Service, and you can pay by debit or credit card. There is no charge if you qualify as a volunteer.",
+    "gold_url": "https://www.gov.uk/dbs-update-service",
+    "gold_chunk": "61-0",
+    "type": "in_scope",
+    "id": "q11"
+  },
+  {
+    "question": "Can I travel outside the UK while waiting for a decision on my Graduate visa application?",
+    "expected_answer": "No, you must not travel outside of the UK, Ireland, the Channel Islands or the Isle of Man until you get a decision. If you do, your application will be withdrawn.",
+    "gold_url": "https://www.gov.uk/graduate-visa",
+    "gold_chunk": "1-6",
+    "type": "in_scope",
+    "id": "q12"
+  },
+  {
+    "question": "What types of income or expenses can I check for a tax refund if I think I paid too much tax?",
+    "expected_answer": "You can check how to claim a tax refund for pay from a job, job expenses like working from home or tools, a Self Assessment tax return, redundancy payments, UK income if you live abroad, savings or PPI interest, life annuity income, foreign income, and UK income earned before leaving the UK.",
+    "gold_url": "https://www.gov.uk/claim-tax-refund",
+    "gold_chunk": "69-0",
+    "type": "in_scope",
+    "id": "q13"
+  },
+  {
+    "question": "How is tax paid if you receive both the State Pension and a private pension?",
+    "expected_answer": "Your private pension provider will usually deduct any tax you owe, including tax owed on your State Pension, before they pay you. At the end of the tax year, your pension provider will give you a P60 showing how much tax you have paid.",
+    "gold_url": "https://www.gov.uk/tax-on-pension",
+    "gold_chunk": "113-4",
+    "type": "in_scope",
+    "id": "q14"
+  },
+  {
+    "question": "What are the calculation caps used by the Money and Pensions Service Redundancy Pay Calculator?",
+    "expected_answer": "The calculation caps are a weekly pay limit of £700, a maximum service length of 20 years, and a maximum statutory pay of £21,000.",
+    "gold_url": "https://www.gov.uk/algorithmic-transparency-records/money-and-pensions-service-redundancy-pay-calculator",
+    "gold_chunk": "71-2",
+    "type": "in_scope",
+    "id": "q15"
+  },
+  {
+    "question": "How much do I get for Statutory Maternity Pay (SMP)?",
+    "expected_answer": "For the first 6 weeks, you get 90% of your average weekly earnings before tax. For the next 33 weeks, you get £194.32 or 90% of your average weekly earnings, whichever is lower.",
+    "gold_url": "https://www.gov.uk/maternity-pay-leave",
+    "gold_chunk": "80-1",
+    "type": "in_scope",
+    "id": "q16"
+  },
+  {
+    "question": "How does being contracted out of the Additional State Pension affect my new State Pension if I reach State Pension age on or after 6 April 2016?",
+    "expected_answer": "An amount is taken off your new State Pension because you either paid National Insurance contributions at a lower rate or some of your contributions went towards a workplace or private pension. Consequently, you might not get the full rate new State Pension of £241.30 a week, with the exact deduction depending on your earnings and how long you were contracted out.",
+    "gold_url": "https://www.gov.uk/contracted-out",
+    "gold_chunk": "96-1",
+    "type": "in_scope",
+    "id": "q17"
+  },
+  {
+    "question": "What should I do if my name changes while I am outside the UK and I have an eVisa with a biometric passport?",
+    "expected_answer": "If your name changes while you are outside the UK and you have a biometric passport, you can update your UKVI account yourself. You can also update your account if your passport details or nationality change.",
+    "gold_url": "https://www.gov.uk/evisa",
+    "gold_chunk": "20-8",
+    "type": "in_scope",
+    "id": "q18"
+  },
+  {
+    "question": "How can an employer get a Positive Verification Notice during a right to work check?",
+    "expected_answer": "An employer can get a Positive Verification Notice from the Employer Checking Service if they are reasonably satisfied that the worker has an outstanding application made before their previous leave expired, or has an outstanding appeal against a Home Office decision.",
+    "gold_url": "https://www.gov.uk/government/publications/right-to-work-checks-employers-guide",
+    "gold_chunk": "29-0",
+    "type": "in_scope",
+    "id": "q19"
+  },
+  {
+    "question": "Do I need an electronic travel authorisation (ETA) to visit the UK if I am an Irish citizen?",
+    "expected_answer": "No, you do not need an ETA to travel to the UK if you are a British or Irish citizen.",
+    "gold_url": "https://www.gov.uk/eta",
+    "gold_chunk": "16-1",
+    "type": "in_scope",
+    "id": "q20"
+  },
+  {
+    "question": "How can I restart my Child Benefit payments if I previously opted out due to the High Income Child Benefit Charge?",
+    "expected_answer": "You can restart your payments by using the online service, filling in an online form, or by contacting the Child Benefit Office by phone or post. Note that if you are an appointee or authorised agent, you cannot use the online service or form.",
+    "gold_url": "https://www.gov.uk/child-benefit-tax-charge",
+    "gold_chunk": "110-7",
+    "type": "in_scope",
+    "id": "q21"
+  },
+  {
+    "question": "What happens to Statutory Sick Pay if I take over a business where TUPE regulations apply?",
+    "expected_answer": "If TUPE regulations apply, continuity of employment is not broken and you must add together all the employees' earnings in the relevant period, including those paid by the previous employer. If an employee was already receiving Statutory Sick Pay when you took over, you must continue paying it until their Period of Incapacity for Work ends.",
+    "gold_url": "https://www.gov.uk/guidance/statutory-sick-pay-business-changes-that-affect-payment",
+    "gold_chunk": "58-0",
+    "type": "in_scope",
+    "id": "q22"
+  },
+  {
+    "question": "How much statutory notice must an employer give an employee who has been made redundant after working for 5 years?",
+    "expected_answer": "For an employee with 2 to 12 years of service, the employer must give a week’s notice for every year employed. Therefore, for 5 years of service, the employee is entitled to 5 weeks' notice.",
+    "gold_url": "https://www.gov.uk/staff-redundant",
+    "gold_chunk": "70-9",
+    "type": "in_scope",
+    "id": "q23"
+  },
+  {
+    "question": "How do I get the employer form SSP1 for Statutory Sick Pay in a different format such as large print or braille?",
+    "expected_answer": "You can contact Jobcentre Plus to ask for a printed copy of the form or a different format, such as large print, braille, or an audio CD.",
+    "gold_url": "https://www.gov.uk/government/publications/statutory-sick-pay-employee-not-entitled-form-for-employers",
+    "gold_chunk": "52-0",
+    "type": "in_scope",
+    "id": "q24"
+  },
+  {
+    "question": "When do I need to give my employer a fit note for Statutory Sick Pay?",
+    "expected_answer": "You must give your employer a fit note if you are off work for more than 7 days in a row, including non-working days. This note can be a digital or printed document from healthcare professionals such as a GP, hospital doctor, registered nurse, occupational therapist, pharmacist, or physiotherapist.",
+    "gold_url": "https://www.gov.uk/statutory-sick-pay",
+    "gold_chunk": "48-1",
+    "type": "in_scope",
+    "id": "q25"
+  },
+  {
+    "question": "When might an employer consider using a zero hours contract?",
+    "expected_answer": "An employer might use a zero hours contract for a new business managing changing demands, seasonal work during busy times like Christmas, covering unexpected sickness of permanent staff, or covering busy periods for special events at places like a wedding venue, restaurant, or bar.",
+    "gold_url": "https://www.gov.uk/guidance/zero-hours-contracts-guidance-for-employers",
+    "gold_chunk": "90-0",
+    "type": "in_scope",
+    "id": "q26"
+  },
+  {
+    "question": "How long is an eligible employee entitled to take for Statutory Maternity Leave?",
+    "expected_answer": "Eligible employees can take up to 52 weeks of Statutory Maternity Leave, split into 26 weeks of Ordinary Maternity Leave and 26 weeks of Additional Maternity Leave.",
+    "gold_url": "https://www.gov.uk/employers-maternity-pay-leave",
+    "gold_chunk": "81-0",
+    "type": "in_scope",
+    "id": "q27"
+  },
+  {
+    "question": "How long does it usually take to get a decision on a Graduate Trainee visa after applying online and providing documents?",
+    "expected_answer": "You will usually get a decision on your Graduate Trainee visa within 3 weeks once you have applied online, proved your identity, and provided your documents. You may also have the option to pay for a faster decision.",
+    "gold_url": "https://www.gov.uk/graduate-trainee-visa",
+    "gold_chunk": "3-1",
+    "type": "in_scope",
+    "id": "q28"
+  },
+  {
+    "question": "Where should I write by post for help with employer enquiries about the National Minimum Wage?",
+    "expected_answer": "You can write to HMRC at the following address for employer enquiries: Individual and Small Business Compliance, HM Revenue and Customs, BX9 1AS, United Kingdom. You do not need to include a street name or PO box, though couriers must use a different address.",
+    "gold_url": "https://www.gov.uk/find-hmrc-contacts/national-minimum-wage-enquiries-and-complaints",
+    "gold_chunk": "44-0",
+    "type": "in_scope",
+    "id": "q29"
+  },
+  {
+    "question": "Can I study a distance learning course in the UK on a Standard Visitor visa that lasts longer than 6 months?",
+    "expected_answer": "Yes, if you are doing a distance learning course, your course can last longer than 6 months because most of your study will happen outside of the UK. You can visit the UK to do certain activities as part of your course, such as attending induction weeks, doing face-to-face intensive learning, having progress checks, or sitting exams and assessments.",
+    "gold_url": "https://www.gov.uk/standard-visitor",
+    "gold_chunk": "2-5",
+    "type": "in_scope",
+    "id": "q30"
+  },
+  {
+    "question": "Do employees get redundancy pay if they resign because they do not want their contract transferred during a TUPE business transfer?",
+    "expected_answer": "No, in most cases staff who resign because they do not want their contracts transferred to a new employer during a business transfer do not get redundancy pay or statutory redundancy pay.",
+    "gold_url": "https://www.gov.uk/handling-staff-resignations",
+    "gold_chunk": "75-0",
+    "type": "in_scope",
+    "id": "q31"
+  },
+  {
+    "question": "How do I reclaim a rented property in England if the tenant dies without a will or executor?",
+    "expected_answer": "In England, the tenancy is transferred temporarily to the Public Trustee, and you cannot take back the property automatically. To reclaim it, you must give written notice, pay a £40 registration fee, and apply to register the notice with the Public Trustee.",
+    "gold_url": "https://www.gov.uk/renting-out-a-property",
+    "gold_chunk": "123-13",
+    "type": "in_scope",
+    "id": "q32"
+  },
+  {
+    "question": "Who is legally allowed to receive rolled-up holiday pay for leave years beginning on or after 1 April 2024?",
+    "expected_answer": "For leave years beginning on or after 1 April 2024, rolled-up holiday pay must only be offered to irregular hours workers (whose paid hours in each pay period are wholly or mostly variable) and part-year workers (who only work part of the year with a gap of at least a week where they do not work and are not paid). Using it for anyone outside these categories is breaking the law.",
+    "gold_url": "https://www.gov.uk/guidance/sia-approved-contractors-and-rolled-up-holiday-pay",
+    "gold_chunk": "62-0",
+    "type": "in_scope",
+    "id": "q33"
+  },
+  {
+    "question": "What conditions must be met for a tenancy to be classified as an assured periodic tenancy?",
+    "expected_answer": "A tenancy is an assured periodic tenancy if the property is your main accommodation, your landlord does not live in the property, and you have your own room while potentially sharing a kitchen or bathroom with other tenants.",
+    "gold_url": "https://www.gov.uk/assured-periodic-tenancies-tenants",
+    "gold_chunk": "124-0",
+    "type": "in_scope",
+    "id": "q34"
+  },
+  {
+    "question": "What are the different types of statutory pay and leave available to employees in the UK?",
+    "expected_answer": "Employees can access Statutory Sick Pay (SSP), Maternity pay and leave, Paternity pay and leave, Adoption pay and leave, Shared Parental Leave and Pay, Neonatal Care Pay and Leave, and Statutory Parental Bereavement Pay and Leave. They can also check eligibility for Maternity Allowance.",
+    "gold_url": "https://www.gov.uk/government/collections/statutory-pay",
+    "gold_chunk": "50-0",
+    "type": "in_scope",
+    "id": "q35"
+  },
+  {
+    "question": "How long does it usually take for an employer to receive a UK visa sponsorship refund from UKVI?",
+    "expected_answer": "You usually get a refund within 90 days of specific events, such as telling UKVI the worker did not come to work, the expiration date of an unused certificate of sponsorship, or the date a visa application is refused or withdrawn. If your refund is not paid within 90 days, you should contact UKVI.",
+    "gold_url": "https://www.gov.uk/uk-visa-sponsorship-employers",
+    "gold_chunk": "12-19",
+    "type": "in_scope",
+    "id": "q36"
+  },
+  {
+    "question": "What is the purpose of the RtW supplementary code for digital right to work checks?",
+    "expected_answer": "The RtW supplementary code sets out the rules for digital verification services (DVS) conducting right to work checks on holders of British and Irish passports or passport cards.",
+    "gold_url": "https://www.gov.uk/guidance/supplementary-code-for-digital-right-to-work-checks-04",
+    "gold_chunk": "30-1",
+    "type": "in_scope",
+    "id": "q37"
+  },
+  {
+    "question": "Where can I find Low Pay Commission reports from before 2006 regarding the National Minimum Wage?",
+    "expected_answer": "Low Pay Commission reports from 1998 to 2005 are available on the National Archives website.",
+    "gold_url": "https://www.gov.uk/government/collections/national-minimum-wage-low-pay-commission-reports",
+    "gold_chunk": "40-0",
+    "type": "in_scope",
+    "id": "q38"
+  },
+  {
+    "question": "What happens to Statutory Maternity Pay if my business ceases to trade?",
+    "expected_answer": "If you cease to trade, you remain liable to pay any outstanding Statutory Maternity Pay until your employee receives their full entitlement or their entitlement ends for some other reason.",
+    "gold_url": "https://www.gov.uk/guidance/statutory-maternity-pay-business-changes-that-affect-payment",
+    "gold_chunk": "77-1",
+    "type": "in_scope",
+    "id": "q39"
+  },
+  {
+    "question": "When do landlords need to use prescribed forms for assured tenancies?",
+    "expected_answer": "Landlords must use the prescribed forms when they want to increase the rent, give notice asking their tenant to leave the property, opt out of granting an assured agricultural occupancy, or propose changes to certain tenancies that arise by succession.",
+    "gold_url": "https://www.gov.uk/guidance/assured-tenancy-forms",
+    "gold_chunk": "115-0",
+    "type": "in_scope",
+    "id": "q40"
+  },
+  {
+    "question": "What was the deadline for most people to apply to the EU Settlement Scheme?",
+    "expected_answer": "The deadline for applying to the EU Settlement Scheme for most people was 30 June 2021.",
+    "gold_url": "https://www.gov.uk/eusettledstatus",
+    "gold_chunk": "126-0",
+    "type": "in_scope",
+    "id": "q41"
+  },
+  {
+    "question": "What personal information and details do I need to give my new employer to get paid?",
+    "expected_answer": "To get paid, you need to provide your National Insurance number, bank details, proof of your identity, and details of any student loan repayment plan you are on or any benefits you receive.",
+    "gold_url": "https://www.gov.uk/start-a-job",
+    "gold_chunk": "93-0",
+    "type": "in_scope",
+    "id": "q42"
+  },
+  {
+    "type": "out_of_scope",
+    "question": "Who won the cricket world cup?",
+    "expected_answer": null,
+    "gold_url": null,
+    "id": "q43"
+  },
+  {
+    "type": "out_of_scope",
+    "question": "How do I bake sourdough bread?",
+    "expected_answer": null,
+    "gold_url": null,
+    "id": "q44"
+  },
+  {
+    "type": "out_of_scope",
+    "question": "What is the capital of France?",
+    "expected_answer": null,
+    "gold_url": null,
+    "id": "q45"
+  },
+  {
+    "type": "out_of_scope",
+    "question": "Which laptop is best for programming?",
+    "expected_answer": null,
+    "gold_url": null,
+    "id": "q46"
+  },
+  {
+    "type": "out_of_scope",
+    "question": "Explain how photosynthesis works.",
+    "expected_answer": null,
+    "gold_url": null,
+    "id": "q47"
+  },
+  {
+    "type": "out_of_scope",
+    "question": "How do I fix a flat bicycle tyre?",
+    "expected_answer": null,
+    "gold_url": null,
+    "id": "q48"
+  },
+  {
+    "type": "out_of_scope",
+    "question": "Write me a poem about autumn.",
+    "expected_answer": null,
+    "gold_url": null,
+    "id": "q49"
+  },
+  {
+    "type": "out_of_scope",
+    "question": "How do I apply for a US work visa?",
+    "expected_answer": null,
+    "gold_url": null,
+    "id": "q50"
+  },
+  {
+    "type": "out_of_scope",
+    "question": "What is the minimum wage in Germany?",
+    "expected_answer": null,
+    "gold_url": null,
+    "id": "q51"
+  },
+  {
+    "type": "out_of_scope",
+    "question": "How much does a Canadian work permit cost?",
+    "expected_answer": null,
+    "gold_url": null,
+    "id": "q52"
+  }
+]

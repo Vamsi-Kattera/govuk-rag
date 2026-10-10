@@ -1,0 +1,20 @@
+# secrets: never commit these
+.env
+*.key
+
+# python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# data: keep data/chunks.jsonl (the Docker build needs it); ignore the rest
+data/raw/
+data/chroma/
+
+# evaluation scratch files (keep eval/questions.json and eval/results.md)
+eval/answers_cache_*.json
+eval/generated_cache.json
+eval/review_state.json
+eval/questions_draft.json
+eval/questions_backup.json
