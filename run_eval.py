@@ -16,7 +16,7 @@ from pathlib import Path
 import numpy as np
 
 from gemini_utils import MODEL, call_json, retry
-from generate import MIN_SIM, RagAssistant
+from generate import MIN_SIM, PROMPT_VERSION, RagAssistant
 from retriever import HybridRetriever
 
 QUESTIONS_FILE = Path("eval/questions.json")
@@ -107,7 +107,7 @@ def answer_eval(assistant: RagAssistant, mode: str, questions: list[dict], sleep
     details, latencies = [], []
     # Progress is cached per mode/model/gate, so a quota error never loses finished questions.
     # Delete eval/answers_cache_* if you change the prompt or retrieval code and want a fresh run.
-    cache_file = Path(f"eval/answers_cache_{mode}_{MODEL}_{MIN_SIM}.json")
+    cache_file = Path(f"eval/answers_cache_{mode}_{MODEL}_{MIN_SIM}_{PROMPT_VERSION}.json")
     cache = json.loads(cache_file.read_text(encoding="utf-8")) if cache_file.exists() else {}
     for i, q in enumerate(questions, 1):
         if q["question"] in cache:  # finished in an earlier run

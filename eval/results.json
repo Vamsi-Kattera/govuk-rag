@@ -92,10 +92,10 @@
       "n_out_of_scope": 10,
       "accuracy": 0.9523809523809523,
       "false_refusal_rate": 0.023809523809523808,
-      "hallucination_rate": 0.04878048780487805,
+      "hallucination_rate": 0.024390243902439025,
       "oos_refusal_rate": 1.0,
-      "latency_p50_ms": 2247,
-      "latency_p95_ms": 2703
+      "latency_p50_ms": 2619,
+      "latency_p95_ms": 2978
     }
   },
   "details": {
@@ -104,13 +104,13 @@
         "id": "q01",
         "type": "in_scope",
         "question": "can i go outside uk on my graduate visa for a trip?",
-        "answer": "Yes, you can travel abroad and return to the UK on your Graduate visa [5].\n\nThis is general guidance, not legal advice.",
+        "answer": "Yes, with a Graduate visa you can travel abroad and return to the UK [3].\n\nThis is general guidance, not legal advice.",
         "answered": true,
-        "total_ms": 2791,
+        "total_ms": 2583,
         "llm_used": true,
         "correct": true,
-        "faithful": false,
-        "reason": "The system answer is not faithful because it cites source [5], which only contains fragments of text and does not actually state that a Graduate visa allows travel abroad and return."
+        "faithful": true,
+        "reason": "The system correctly answers that you can travel abroad and return to the UK on a Graduate visa, which is supported by source [3]."
       },
       {
         "id": "q02",
@@ -118,7 +118,7 @@
         "question": "Can I work full-time on a Graduate visa?",
         "answer": "I don't know based on the GOV.UK pages I have indexed.\n\nThis is general guidance, not legal advice.",
         "answered": false,
-        "total_ms": 2586,
+        "total_ms": 2308,
         "llm_used": true,
         "correct": false,
         "faithful": null,
@@ -128,273 +128,273 @@
         "id": "q03",
         "type": "in_scope",
         "question": "What identity documents can I use to apply for the Ukraine Permission Extension scheme if I do not have a valid international passport?",
-        "answer": "If you do not have a valid international passport, you may use any of the following alternatives:\n\n* A recently expired international passport, provided the photograph clearly resembles you [1].\n* A valid or recently expired Ukrainian national identity card (Passport card) with a facial image that clearly resembles you [1].\n* An emergency certificate issued by a Ukrainian authority since March 2022 [1].\n* A combination of official documents (such as a photo driving licence and birth certificate) where at least one contains a recent facial image that resembles you and establishes your name, date of birth, nationality, and determined sex [1].\n\nThis is general guidance, not legal advice.",
+        "answer": "If you do not have a valid international passport and have a reasonable explanation for why you do not, you may use one of the following to prove your identity and nationality:\n\n* A recently expired international passport, where the photo clearly resembles you [1]\n* A valid or recently expired Ukrainian national identity card (Passport card) with a facial image that clearly resembles you [1]\n* A combination of official documents (for example, a photo driving licence and birth certificate)—with at least one containing a recent facial image that clearly resembles you—that establishes your name, date of birth, nationality, and determined sex [1]\n* An emergency certificate issued by a Ukrainian authority since March 2022 [1]\n\nThis is general guidance, not legal advice.",
         "answered": true,
-        "total_ms": 2715,
+        "total_ms": 3000,
         "llm_used": true,
         "correct": true,
         "faithful": true,
-        "reason": "The system answer accurately lists all acceptable identity documents for the Ukraine Permission Extension scheme when lacking a valid international passport, and all claims are fully supported by source [1]."
+        "reason": "The system accurately listed the alternative identity documents provided in the source text for applicants without a valid international passport."
       },
       {
         "id": "q04",
         "type": "in_scope",
         "question": "What is the maximum statutory guarantee pay I can receive if I am laid off?",
-        "answer": "Based on the provided sources, the maximum statutory guarantee pay you can receive depends on the specific guidance referenced:\n\n* One source states the maximum is **£41 a day for 5 days** in any 3-month period, up to a maximum of **£205** [1].\n* Another source states the maximum payment is **£31 a day for 5 days** (£155) in any 3 months [2].\n\nIf you usually earn less than the daily rate, you will receive your normal daily rate, and part-time workers' entitlements are worked out proportionally [1][2]. \n\nThis is general guidance, not legal advice.",
+        "answer": "Based on the provided sources, the maximum statutory guarantee pay you can receive depends on the specific rate applied:\n\n* Up to **£41 a day** for 5 days in any 3-month period (a maximum of **£205**) [1].\n* Alternatively, another source states the maximum payment is **£31 a day** for 5 days (£155) in any 3 months [2]. \n\nIf you usually earn less than the daily maximum rate, you will receive your normal daily rate, and part-time workers' entitlements are worked out proportionally [1][2].\n\nThis is general guidance, not legal advice.",
         "answered": true,
-        "total_ms": 2919,
+        "total_ms": 2509,
         "llm_used": true,
         "correct": true,
         "faithful": true,
-        "reason": "The system accurately reflects the conflicting maximum rates present in the provided sources."
+        "reason": "The system answer accurately reflects the differing figures present in the provided sources."
       },
       {
         "id": "q05",
         "type": "in_scope",
         "question": "How much is the weekly Child Benefit rate for an eldest or only child?",
-        "answer": "Based on the provided sources, the weekly Child Benefit rate for an eldest or only child is £27.05 [1].\n\nThis is general guidance, not legal advice.",
+        "answer": "The weekly Child Benefit rate for an eldest or only child is £27.05 [1].\n\nThis is general guidance, not legal advice.",
         "answered": true,
-        "total_ms": 2610,
+        "total_ms": 2511,
         "llm_used": true,
         "correct": true,
         "faithful": true,
-        "reason": "The system accurately states the weekly Child Benefit rate for an eldest or only child as £27.05, which matches both the reference answer and the provided sources."
+        "reason": "The system correctly answers the question with £27.05, matching both the reference answer and source [1]."
       },
       {
         "id": "q06",
         "type": "in_scope",
         "question": "Where should I post my printed form to if I need to request a copy of my National Insurance number by post?",
-        "answer": "If you need to request a copy of your National Insurance number by post, you should send your print and post form to:\n\n* National Insurance contributions and Employers Office\n* HM Revenue and Customs\n* BX9 1AN\n\nThis is general guidance, not legal advice.",
+        "answer": "If you need to request a copy of your National Insurance number by post, you should send your print and post form to:\n\n* National Insurance contributions and Employers Office [1]\n* HM Revenue and Customs [1]\n* BX9 1AN [1]\n\nThis is general guidance, not legal advice.",
         "answered": true,
-        "total_ms": 2615,
+        "total_ms": 2657,
         "llm_used": true,
         "correct": true,
         "faithful": true,
-        "reason": "The system answer correctly provides the postal address given in the source for requesting a National Insurance number by post."
+        "reason": "The system provided the correct postal address based on the provided sources and answered the question accurately."
       },
       {
         "id": "q07",
         "type": "in_scope",
         "question": "When does UK Visas and Immigration start processing a visa application made outside the UK?",
-        "answer": "UK Visas and Immigration (UKVI) starts processing your visa application made outside the UK once you do one of the following:\n\n* Verify your identity and submit your documents and application online using the UK Immigration: ID Check app (if you are told you can use it) [1].\n* Attend your appointment at a visa application centre (VAC) to provide your fingerprints and a photograph (biometric information) [1].\n\nThis is general guidance, not legal advice.",
+        "answer": "UK Visas and Immigration (UKVI) starts processing your visa application once you do one of the following:\n\n* Verify your identity and submit your documents and application online using the UK Immigration: ID Check app (if you are told you can use it) [1].\n* Attend your appointment at a visa application centre (VAC) to provide your fingerprints and a photograph (biometric information) [1].\n\nThis is general guidance, not legal advice.",
         "answered": true,
-        "total_ms": 2161,
+        "total_ms": 2141,
         "llm_used": true,
         "correct": true,
         "faithful": true,
-        "reason": "The system answer accurately captures when visa processing starts according to the source."
+        "reason": "The system answer accurately captures when UKVI starts processing a visa application based directly on the provided sources."
       },
       {
         "id": "q08",
         "type": "in_scope",
         "question": "Can I get Statutory Sick Pay if I am off work due to bereavement?",
-        "answer": "Based on the provided sources, bereavement itself is not considered an incapacity [5]. However, Statutory Sick Pay (SSP) may be payable if your employer decides that the reason for your absence is acceptable, taking into account circumstances such as:\n- Suffering from shock due to the nature of the death [5]\n- Suffering from depression or anxiety (or both) through loss [5]\n\nTo qualify for SSP, you must generally meet the standard eligibility criteria, which include:\n- Being classed as an employee [1]\n- Having done some work for your employer [1]\n- Having been ill for at least one full working day [1]\n\nThis is general guidance, not legal advice.",
+        "answer": "Based on GOV.UK guidance, bereavement itself is not considered an incapacity [2]. However:\n* The relationship to the deceased, shock, depression, or anxiety caused by the loss may mean you are ill [2].\n* Your employer will take your circumstances into account and decide whether to accept this as the reason for incapacity [2].\n* Statutory Sick Pay (SSP) is only payable if your employer decides the reason is acceptable [2].\n\nThis is general guidance, not legal advice.",
         "answered": true,
-        "total_ms": 2389,
+        "total_ms": 2423,
         "llm_used": true,
         "correct": true,
         "faithful": true,
-        "reason": "The system accurately answers the question based on the provided text, confirming that bereavement itself is not an incapacity but SSP may be payable if the employer accepts the circumstances."
+        "reason": "The system answer accurately captures the reference answer and relies entirely on source [2]."
       },
       {
         "id": "q09",
         "type": "in_scope",
         "question": "How long do employers need to keep copies of an employee's right to work documents?",
-        "answer": "Based on the provided sources, employers need to keep copies of an employee's right to work documents:\n\n* During the applicant’s employment [1]\n* For 2 years after they stop working for you [1]\n\nThis is general guidance, not legal advice.",
+        "answer": "Employers need to keep copies of an employee's right to work documents:\n* During the applicant's employment [1].\n* For 2 years after they stop working for you [1].\n\nThis is general guidance, not legal advice.",
         "answered": true,
-        "total_ms": 1982,
+        "total_ms": 2649,
         "llm_used": true,
         "correct": true,
         "faithful": true,
-        "reason": "The system accurately answered the question based on the provided source."
+        "reason": "The system answer accurately states that employers must keep copies of right to work documents during the employment and for 2 years after, directly supported by source [1]."
       },
       {
         "id": "q10",
         "type": "in_scope",
         "question": "How are variable working hours averaged when calculating redundancy pay and holiday pay?",
-        "answer": "Based on the provided sources, when hours worked per week vary:\n* **Redundancy pay:** An average is taken across 12 weeks [1].\n* **Holiday pay:** An average is taken over 52 weeks [1].\n\nThis is general guidance, not legal advice.",
+        "answer": "Based on the provided sources, when hours worked per week vary:\n* **Redundancy pay, arrears of pay, and notice pay:** An average is taken across 12 weeks [1].\n* **Holiday pay:** An average is taken over 52 weeks [1].\n\nThis is general guidance, not legal advice.",
         "answered": true,
-        "total_ms": 2032,
+        "total_ms": 2302,
         "llm_used": true,
         "correct": true,
         "faithful": true,
-        "reason": "The system accurately answers how variable hours are averaged for redundancy and holiday pay based directly on the provided sources."
+        "reason": "The system answer accurately states the averaging periods for redundancy and holiday pay based directly on the provided sources."
       },
       {
         "id": "q11",
         "type": "in_scope",
         "question": "How much does it cost to register for the DBS Update Service if I am not a volunteer?",
-        "answer": "Based on the provided sources:\n\n* It costs £15 per year to register for the DBS Update Service, and you can pay by debit or credit card [1].\n\nThis is general guidance, not legal advice.",
+        "answer": "- It costs £15 per year to register for the DBS Update Service [1].\n- You can pay by debit or credit card [1].\n\nThis is general guidance, not legal advice.",
         "answered": true,
-        "total_ms": 2134,
+        "total_ms": 2784,
         "llm_used": true,
         "correct": true,
         "faithful": true,
-        "reason": "The system accurately states that the DBS Update Service costs £15 per year based on the sources."
+        "reason": "The system accurately states the cost is £15 per year and payment methods based on the source."
       },
       {
         "id": "q12",
         "type": "in_scope",
         "question": "Can I travel outside the UK while waiting for a decision on my Graduate visa application?",
-        "answer": "Based on the provided sources, you must not travel outside of the UK, Ireland, the Channel Islands, or the Isle of Man until you get a decision on your Graduate visa application [3]. If you do, your application will be withdrawn [3].\n\nThis is general guidance, not legal advice.",
+        "answer": "Based on the provided guidance:\n\n* You must not travel outside of the UK, Ireland, the Channel Islands or the Isle of Man until you get a decision on your Graduate visa application [2]. \n* If you do travel outside of these areas, your application will be withdrawn [2].\n\nThis is general guidance, not legal advice.",
         "answered": true,
-        "total_ms": 2133,
+        "total_ms": 2919,
         "llm_used": true,
         "correct": true,
-        "faithful": true,
-        "reason": "The system answer accurately states the key facts from the reference and is fully supported by source 3."
+        "faithful": false,
+        "reason": "The system's answer cites source [2] for the rule about travel, but the provided text for source [2] does not actually contain that rule (it appears to be missing or truncated in the source text provided)."
       },
       {
         "id": "q13",
         "type": "in_scope",
         "question": "What types of income or expenses can I check for a tax refund if I think I paid too much tax?",
-        "answer": "You may be able to get a tax refund if you have paid too much tax on:\n- Pay from a job [1]\n- Job expenses such as working from home, fuel, work clothing, or tools [1]\n- A Self Assessment tax return [1]\n- A redundancy payment [1]\n- UK income if you live abroad [1]\n- Interest from savings or payment protection insurance (PPI) [1]\n- Income from a life annuity [1]\n- Foreign income [1]\n- UK income earned before leaving the UK [1]\n\nThis is general guidance, not legal advice.",
+        "answer": "You may be able to get a tax refund if you have paid too much tax on:\n\n* Pay from a job [1]\n* Job expenses, such as working from home, fuel, work clothing, or tools [1]\n* A Self Assessment tax return [1]\n* A redundancy payment [1]\n* UK income if you live abroad [1]\n* Interest from savings or payment protection insurance (PPI) [1]\n* Income from a life annuity [1]\n* Foreign income [1]\n* UK income earned before leaving the UK [1]\n\nThis is general guidance, not legal advice.",
         "answered": true,
-        "total_ms": 2157,
+        "total_ms": 2506,
         "llm_used": true,
         "correct": true,
         "faithful": true,
-        "reason": "The system answer accurately lists all types of income and expenses eligible for a tax refund as stated in the reference answer and supported by the sources."
+        "reason": "The system answer accurately and completely lists the types of income and expenses for checking a tax refund based on the sources."
       },
       {
         "id": "q14",
         "type": "in_scope",
         "question": "How is tax paid if you receive both the State Pension and a private pension?",
-        "answer": "Based on the provided sources, tax on your State Pension and private pension is paid in the following ways:\n\n* Your private pension provider will usually deduct any tax you owe (including tax owed on your State Pension) before they pay you [1].\n* If you receive payments from more than one provider (such as a workplace and a personal pension), HM Revenue and Customs (HMRC) will ask one of your providers to take the tax off your State Pension [1].\n\nThis is general guidance, not legal advice.",
+        "answer": "Based on the provided source, if you get the State Pension and a private pension:\n\n* Your private pension provider will usually take off any tax you owe before they pay you, which includes any tax owed on your State Pension [1].\n* If you receive payments from more than one provider (such as a workplace pension and a personal pension), HM Revenue and Customs (HMRC) will ask one of your providers to deduct the tax for your State Pension [1].\n* At the end of the tax year, your pension provider will give you a P60 showing how much tax you have paid [1].\n\nThis is general guidance, not legal advice.",
         "answered": true,
-        "total_ms": 2206,
+        "total_ms": 2973,
         "llm_used": true,
         "correct": true,
         "faithful": true,
-        "reason": "The system answer accurately describes how tax is paid on both State and private pensions based on the provided sources."
+        "reason": "The system answer accurately captures the details from the sources regarding how tax is paid when receiving both State and private pensions."
       },
       {
         "id": "q15",
         "type": "in_scope",
         "question": "What are the calculation caps used by the Money and Pensions Service Redundancy Pay Calculator?",
-        "answer": "Based on the provided sources, the calculation caps used by the Redundancy Pay Calculator are:\n\n* **Weekly pay cap:** £700 [1][3][5]\n* **Service length cap:** 20 years [1][3][5]\n* **Maximum statutory pay cap:** £21,000 [1][3][5]\n\nThis is general guidance, not legal advice.",
+        "answer": "Based on the provided source, the calculation caps used by the Redundancy Pay Calculator are:\n\n* **Weekly pay:** Capped at £700 [1]\n* **Service length:** Capped at 20 years [1]\n* **Maximum statutory pay:** Capped at £21,000 [1]\n\nThis is general guidance, not legal advice.",
         "answered": true,
-        "total_ms": 2361,
+        "total_ms": 2920,
         "llm_used": true,
         "correct": true,
         "faithful": true,
-        "reason": "The system answer accurately states the calculation caps from the reference answer, and every claim is supported by the provided sources."
+        "reason": "The system answer accurately identifies the calculation caps using the provided source."
       },
       {
         "id": "q16",
         "type": "in_scope",
         "question": "How much do I get for Statutory Maternity Pay (SMP)?",
-        "answer": "You get Statutory Maternity Pay (SMP) for up to the following amounts:\n* **First 6 weeks:** 90% of your average weekly earnings (before tax) [1][5].\n* **Next 33 weeks:** £194.32 a week or 90% of your average weekly earnings, whichever is lower [1][5].\n\nTax and National Insurance will be deducted from your payments [1][5]. \n\nThis is general guidance, not legal advice.",
+        "answer": "Statutory Maternity Pay (SMP) is paid for up to 39 weeks and is calculated as follows:\n* **First 6 weeks:** 90% of your average weekly earnings (before tax) [1][2].\n* **Next 33 weeks:** £194.32 or 90% of your average weekly earnings, whichever is lower [1][2].\n\nTax and National Insurance will be deducted from these payments [1][2].\n\nThis is general guidance, not legal advice.",
         "answered": true,
-        "total_ms": 1993,
+        "total_ms": 2691,
         "llm_used": true,
         "correct": true,
         "faithful": true,
-        "reason": "The system accurately states the SMP rates and durations using information directly from the sources."
+        "reason": "The system answer accurately provides the Statutory Maternity Pay rates and duration based on the reference answer and sources, including the deduction of tax and national insurance."
       },
       {
         "id": "q17",
         "type": "in_scope",
         "question": "How does being contracted out of the Additional State Pension affect my new State Pension if I reach State Pension age on or after 6 April 2016?",
-        "answer": "If you reach State Pension age on or after 6 April 2016 and were contracted out before that date, it may affect your pension in the following ways:\n\n* You might not get the full rate of the new State Pension (£241.30 a week) [1].\n* An amount is deducted from your new State Pension because you paid National Insurance contributions at a lower rate, or because some of your contributions went towards a workplace or private pension instead [1].\n* The deduction amount depends on how long you were contracted out and your earnings at the time [1].\n* You may be able to increase your State Pension by adding qualifying years to your National Insurance record, with each full qualifying year adding about £6.89 a week [1].\n\nThis is general guidance, not legal advice.",
+        "answer": "If you reach State Pension age on or after 6 April 2016 and were contracted out before 6 April 2016, you might not get the full rate of the new State Pension (£241.30 a week) [1]. \n\nAn amount is taken off your new State Pension because:\n- You paid National Insurance contributions at a lower rate, or [1]\n- Some of the National Insurance contributions you paid were used to contribute to a workplace or private pension [1]\n\nThe amount taken off depends on:\n- How long you were contracted out [1]\n- Your earnings at the time [1]\n\nThis is because, while you were contracted out, you were paying into your workplace or personal pension instead [1]. You may be able to increase your State Pension by adding qualifying years onto your National Insurance record [1].\n\nThis is general guidance, not legal advice.",
         "answered": true,
-        "total_ms": 2266,
+        "total_ms": 2510,
         "llm_used": true,
         "correct": true,
         "faithful": true,
-        "reason": "The system answer accurately explains how being contracted out affects the new State Pension using facts supported by the sources."
+        "reason": "The system answer accurately and faithfully reflects the reference answer and provided sources."
       },
       {
         "id": "q18",
         "type": "in_scope",
         "question": "What should I do if my name changes while I am outside the UK and I have an eVisa with a biometric passport?",
-        "answer": "Based on the provided sources, if your name changes while you are outside the UK and you have a biometric passport, you can update your UKVI account yourself [1]. \n\nTo update your account, you will need:\n* The details you use to sign in to your UKVI account (such as your passport, national identity card, BRC, expired BRP, or UKVI customer number) [2].\n* Access to the mobile phone number or email address you use to sign in [2].\n* An identity document that proves your name has changed [2].\n\nYou cannot change your name in your UKVI account if you are waiting for a visa application decision [2].\n\nThis is general guidance, not legal advice.",
+        "answer": "If your name changes while you are outside the UK and you have a biometric passport and an eVisa, you can update your UKVI account yourself [1]. \n\nThis is general guidance, not legal advice.",
         "answered": true,
-        "total_ms": 2349,
+        "total_ms": 2376,
         "llm_used": true,
         "correct": true,
         "faithful": true,
-        "reason": "The system answer accurately states the core fact from the reference and is fully supported by the provided sources."
+        "reason": "The system answer correctly states that if your name changes while outside the UK and you have a biometric passport and an eVisa, you can update your UKVI account yourself, which is fully supported by the provided source."
       },
       {
         "id": "q19",
         "type": "in_scope",
         "question": "How can an employer get a Positive Verification Notice during a right to work check?",
-        "answer": "An employer can get a Positive Verification Notice by:\n- Asking the Home Office to check the applicant's right to work when presented with a digital or non-digital Certificate of Application (or an Application Registration Card) that requires a Home Office check [1].\n- Contacting the Employer Checking Service if they are reasonably satisfied that the worker has an outstanding application (made before their previous immigration permission or leave expired), appeal, or administrative review against a Home Office decision [2][3].\n\nThis is general guidance, not legal advice.",
+        "answer": "An employer can get a Positive Verification Notice by asking the Home Office when:\n* They are checking a job applicant who presents a digital or non-digital Certificate of Application that states the employer needs to ask the Home Office to check their right to work [1].\n* They are reasonably satisfied that the worker has an outstanding application made before their previous immigration permission (or leave) expired, or an outstanding appeal or administrative review against a Home Office decision, and they contact the employer checking service [2][3].\n\nThe Home Office will then send the Positive Verification Notice to confirm the applicant has the right to work, which the employer must keep [1].\n\nThis is general guidance, not legal advice.",
         "answered": true,
-        "total_ms": 2033,
+        "total_ms": 2714,
         "llm_used": true,
         "correct": true,
         "faithful": true,
-        "reason": "The system answer accurately describes how an employer can get a Positive Verification Notice based on the provided sources."
+        "reason": "The system answer covers the key facts from the reference and is fully supported by the provided sources."
       },
       {
         "id": "q20",
         "type": "in_scope",
         "question": "Do I need an electronic travel authorisation (ETA) to visit the UK if I am an Irish citizen?",
-        "answer": "* No, you do not need an electronic travel authorisation (ETA) if you are an Irish citizen [1][3].\n\nThis is general guidance, not legal advice.",
+        "answer": "* No, you do not need an electronic travel authorisation (ETA) if you are an Irish citizen [1]. \n\nThis is general guidance, not legal advice.",
         "answered": true,
-        "total_ms": 2125,
+        "total_ms": 2508,
         "llm_used": true,
         "correct": true,
         "faithful": true,
-        "reason": "The system correctly answers that an Irish citizen does not need an ETA, which is fully supported by the sources."
+        "reason": "The system correctly states that Irish citizens do not need an ETA, which is supported by the sources."
       },
       {
         "id": "q21",
         "type": "in_scope",
         "question": "How can I restart my Child Benefit payments if I previously opted out due to the High Income Child Benefit Charge?",
-        "answer": "You can restart your Child Benefit payments at any time if you still qualify [1][2]. You can do this by:\n\n* Using the online service [1]\n* Filling in an online form [1]\n* Contacting the Child Benefit Office by phone or post [1]\n\n**Conditions and steps:**\n* You will need to sign in (or create details) to use the online service or online form [1].\n* You cannot use the online service or online form if you are an appointee or authorised agent [1].\n* It can take up to 28 days to receive your first payment after the Child Benefit Office receives your request [1].\n* You or your partner will have to pay any tax charge on the benefit received from the restart date if your adjusted net income is over the threshold [1].\n* You must report any changes to your family life that affect your Child Benefit [1].\n\nThis is general guidance, not legal advice.",
+        "answer": "To restart your Child Benefit payments after previously opting out because of the tax charge, you can use the following methods:\n\n* Use the online service [1].\n* Fill in an online form [1].\n* Contact the Child Benefit Office by phone or post [1].\n\n**Conditions and details:**\n* You can only restart your payments if you still qualify for Child Benefit [1].\n* You cannot use the online service or online form if you are an appointee or authorised agent [1].\n* If you do not already have sign-in details for the online options, you can create them [1].\n* It can take up to 28 days to receive your first payment after the Child Benefit Office gets your request [1].\n* The office will write to inform you of the amount you will get from any backdated payments [1].\n\nThis is general guidance, not legal advice.",
         "answered": true,
-        "total_ms": 2410,
+        "total_ms": 2506,
         "llm_used": true,
         "correct": true,
         "faithful": true,
-        "reason": "The system answer accurately states all methods to restart Child Benefit payments, restrictions for appointees/agents, and relevant details, fully supported by the sources."
+        "reason": "The system answer accurately states the methods to restart Child Benefit payments and includes details directly supported by the sources."
       },
       {
         "id": "q22",
         "type": "in_scope",
         "question": "What happens to Statutory Sick Pay if I take over a business where TUPE regulations apply?",
-        "answer": "Based on the provided sources, if you take over a business and TUPE regulations apply:\n* Continuity of employment is not broken [1].\n* You must add together all earnings in the relevant period, including those paid by the previous employer [1].\n* If the employee was already getting Statutory Sick Pay (SSP) when you took over, you must continue paying it until their Period of Incapacity for Work (PIW) ends [1].\n\nThis is general guidance, not legal advice.",
+        "answer": "When you take over a business where the Transfer of Undertakings (Protection of Employment) (TUPE) Regulations 2006 apply:\n\n* Continuity of employment is not broken [1].\n* You must add together all earnings in the relevant period, including those paid by the previous employer [1].\n* If the employee was already getting Statutory Sick Pay (SSP) when you took over, you must continue paying it until the Period of Incapacity for Work (PIW) ends [1].\n\nThis is general guidance, not legal advice.",
         "answered": true,
-        "total_ms": 2237,
+        "total_ms": 2350,
         "llm_used": true,
         "correct": true,
         "faithful": true,
-        "reason": "The system answer accurately captures all key facts from the reference answer and is fully supported by the provided source."
+        "reason": "The system answer accurately captures all key facts from the reference answer and is fully supported by the provided sources."
       },
       {
         "id": "q23",
         "type": "in_scope",
         "question": "How much statutory notice must an employer give an employee who has been made redundant after working for 5 years?",
-        "answer": "Based on the provided guidance, for an employee with 5 years of continuous service (which falls into the 2 years to 12 years category), the employer must give:\n\n* A week’s notice for every year employed [2].\n\nThis means an employee who has worked for 5 years is entitled to at least 5 weeks of statutory notice [2].\n\nThis is general guidance, not legal advice.",
+        "answer": "Based on the provided guidance, an employer must give an employee who has been employed for 5 years at least a week’s notice for every year employed [1]. Therefore, for 5 years of service, the required statutory notice is 5 weeks [1].\n\nThis is general guidance, not legal advice.",
         "answered": true,
-        "total_ms": 2265,
+        "total_ms": 2540,
         "llm_used": true,
         "correct": true,
         "faithful": true,
-        "reason": "The system correctly states that an employee with 5 years of service is entitled to 5 weeks of statutory notice, based on the provided source."
+        "reason": "The system accurately answered 5 weeks based on the provided text for 2 to 12 years of service."
       },
       {
         "id": "q24",
         "type": "in_scope",
         "question": "How do I get the employer form SSP1 for Statutory Sick Pay in a different format such as large print or braille?",
-        "answer": "To get the employer form SSP1 in a different format (such as large print, braille, or audio CD), you can contact Jobcentre Plus to ask for:\n- A printed copy of the form [1]\n- A different format [1]\n\nThis is general guidance, not legal advice.",
+        "answer": "To get form SSP1 in a different format such as large print, braille, or audio CD, you must contact Jobcentre Plus [1]. \n\nThis is general guidance, not legal advice.",
         "answered": true,
-        "total_ms": 2127,
+        "total_ms": 2919,
         "llm_used": true,
         "correct": true,
         "faithful": true,
-        "reason": "The system answer accurately states the key facts from the reference answer and is fully supported by the provided sources."
+        "reason": "The system answer accurately explains how to get the form in a different format based on the source text."
       },
       {
         "id": "q25",
         "type": "in_scope",
         "question": "When do I need to give my employer a fit note for Statutory Sick Pay?",
-        "answer": "You must give your employer a fit note if you are off work sick for more than 7 days in a row (including non-working days) [1][2]. \n\nThis is general guidance, not legal advice.",
+        "answer": "Based on the provided guidance, you need to give your employer a fit note:\n\n* If you are off work for more than 7 days in a row (including non-working days) [1][2].\n\nThis is general guidance, not legal advice.",
         "answered": true,
-        "total_ms": 2097,
+        "total_ms": 2613,
         "llm_used": true,
         "correct": true,
         "faithful": true,
@@ -404,145 +404,145 @@
         "id": "q26",
         "type": "in_scope",
         "question": "When might an employer consider using a zero hours contract?",
-        "answer": "An employer might consider using a zero hours contract for:\n* New businesses taking time to build up a customer base and manage changing demands [2]\n* Seasonal work, such as retailers being busier around Christmas [2]\n* Finding cover when permanent staff are unexpectedly off sick [2]\n* Special events, such as a wedding venue, restaurant, or bar covering busy periods [2]\n* 'Piece work' or 'on-call' work, such as interpreters [4]\n\nThis is general guidance, not legal advice.",
+        "answer": "Based on the provided guidance, employers might consider using a zero hours contract for:\n\n* **New businesses:** To help manage changing demands while taking time to build up a customer base [1].\n* **Seasonal work:** At busy times of the year, such as retailers using them around Christmas [1].\n* **Unexpected sickness:** To find cover when permanent staff are unexpectedly off sick [1].\n* **Special events:** To cover busy periods at a wedding venue, restaurant, or bar [1].\n* **'Piece work' or 'on call' work:** For work where individuals are on call when needed, such as interpreters [2].\n\nThis is general guidance, not legal advice.",
         "answered": true,
-        "total_ms": 2265,
+        "total_ms": 2580,
         "llm_used": true,
         "correct": true,
-        "faithful": false,
-        "reason": "The system answer includes a claim about 'piece work' or 'on-call' work from source [4], but the question specifically asks about zero hours contracts, and source [4] discusses a different contract type (zero-hours contracts versus casual contracts)."
+        "faithful": true,
+        "reason": "The system answer accurately captures the key facts from the reference and sources, including the bullet point about piece work or on call work which is present in source [2]."
       },
       {
         "id": "q27",
         "type": "in_scope",
         "question": "How long is an eligible employee entitled to take for Statutory Maternity Leave?",
-        "answer": "Eligible employees are entitled to take up to 52 weeks of Statutory Maternity Leave [1][4]. This is split into:\n* **Ordinary Maternity Leave:** the first 26 weeks [1][4].\n* **Additional Maternity Leave:** the last 26 weeks [1][4].\n\nWhile taking the full 52 weeks is optional, employees must take a minimum of:\n* 2 weeks after the birth, or [1][4]\n* 4 weeks after the birth if they are a factory worker [1][4].\n\nThis is general guidance, not legal advice.",
+        "answer": "Eligible employees are entitled to take up to 52 weeks of Statutory Maternity Leave [1][2]. \n\nThis leave is divided into:\n* **Ordinary Maternity Leave:** The first 26 weeks [1][2].\n* **Additional Maternity Leave:** The last 26 weeks [1][2].\n\nConditions regarding the timing of this leave include:\n* Leave can start no earlier than 11 weeks before the expected week of childbirth (unless the baby is born early or the employee is off work for a pregnancy-related illness in the 4 weeks before the due week) [1][2].\n* Employees must take at least 2 weeks of leave after the birth, or 4 weeks if they are a factory worker [1][2].\n* Leave starts the day after the birth if the baby is born early [1][2].\n\nThis is general guidance, not legal advice.",
         "answered": true,
-        "total_ms": 2193,
+        "total_ms": 2919,
         "llm_used": true,
         "correct": true,
         "faithful": true,
-        "reason": "The system accurately and faithfully answers the question using information directly from the sources."
+        "reason": "The system accurately answers the question based on the sources, including key details from the reference answer."
       },
       {
         "id": "q28",
         "type": "in_scope",
         "question": "How long does it usually take to get a decision on a Graduate Trainee visa after applying online and providing documents?",
-        "answer": "Based on the provided sources, you will usually get a decision on a Graduate Trainee visa within 3 weeks after you have applied online, proved your identity, and provided your documents [1][3]. You may also be able to pay to get a faster decision [1][3].\n\nThis is general guidance, not legal advice.",
+        "answer": "You will usually get a decision on a Graduate Trainee visa within 3 weeks of applying online, proving your identity, and providing your documents [1]. You may be able to pay to get a faster decision [1].\n\nThis is general guidance, not legal advice.",
         "answered": true,
-        "total_ms": 1973,
+        "total_ms": 2509,
         "llm_used": true,
         "correct": true,
         "faithful": true,
-        "reason": "The system answer accurately states the timeframe and the option for a faster decision based on the provided sources."
+        "reason": "The system answer accurately and faithfully states that it usually takes within 3 weeks to get a decision on a Graduate Trainee visa, and that you may be able to pay for a faster decision."
       },
       {
         "id": "q29",
         "type": "in_scope",
         "question": "Where should I write by post for help with employer enquiries about the National Minimum Wage?",
-        "answer": "You can write by post to HMRC for help with employer enquiries about the National Minimum Wage at the following address (you do not need to include a street name or PO box):\n\n* Individual and Small Business Compliance\n  HM Revenue and Customs\n  BX9 1AS\n  United Kingdom\n\n*(Note: Couriers should use a different address.)*\n\nThis is general guidance, not legal advice.",
+        "answer": "You can write by post to HMRC for help with employer enquiries about the National Minimum Wage using the following address (you do not need to include a street name or PO box):\n\n* Individual and Small Business Compliance\n* HM Revenue and Customs\n* BX9 1AS\n* United Kingdom\n\n*(Note: Couriers must use a different address.)* [1]\n\nThis is general guidance, not legal advice.",
         "answered": true,
-        "total_ms": 2258,
+        "total_ms": 2812,
         "llm_used": true,
         "correct": true,
         "faithful": true,
-        "reason": "The system answer accurately provides the mailing address and instructions for employer enquiries based on the provided sources."
+        "reason": "The system answer accurately provides the correct postal address and details found in the sources."
       },
       {
         "id": "q30",
         "type": "in_scope",
         "question": "Can I study a distance learning course in the UK on a Standard Visitor visa that lasts longer than 6 months?",
-        "answer": "Yes, if you are doing a distance learning course, your course can last longer than 6 months because most of your study will happen outside of the UK [1]. \n\nAs a Standard Visitor, you can visit the UK for certain activities as part of your distance learning course, such as:\n* Attending induction weeks [1][3]\n* Doing face-to-face intensive learning [1][3]\n* Having progress checks [1][3]\n* Sitting exams or assessments [1][3]\n\nThis is general guidance, not legal advice.",
+        "answer": "Yes, if you are doing a distance learning course, your course can last longer than 6 months because most of your study will happen outside of the UK [1]. You can visit the UK to do certain activities as part of your course, such as:\n- Attend induction weeks [1]\n- Do face-to-face intensive learning [1]\n- Have progress checks [1]\n- Sit exams or assessments [1]\n\nThis is general guidance, not legal advice.",
         "answered": true,
-        "total_ms": 2277,
+        "total_ms": 2662,
         "llm_used": true,
         "correct": true,
         "faithful": true,
-        "reason": "The system answer accurately and faithfully addresses the user's question using information from the sources."
+        "reason": "The system answer accurately addresses the question using facts directly supported by the provided source text."
       },
       {
         "id": "q31",
         "type": "in_scope",
         "question": "Do employees get redundancy pay if they resign because they do not want their contract transferred during a TUPE business transfer?",
-        "answer": "In most cases, staff who resign because they do not want their contracts transferred during a TUPE business transfer do not get redundancy pay or statutory redundancy pay [1].\n\nThis is general guidance, not legal advice.",
+        "answer": "Based on the provided sources, in most cases, staff who resign because they do not want their contracts to be transferred to a new employer during a business transfer (TUPE) do not get redundancy pay or statutory redundancy pay [1].\n\nThis is general guidance, not legal advice.",
         "answered": true,
-        "total_ms": 1869,
+        "total_ms": 2511,
         "llm_used": true,
         "correct": true,
         "faithful": true,
-        "reason": "The system accurately answers the question using only facts supported by the provided sources."
+        "reason": "The system answer accurately states the key facts from the reference answer and is fully supported by source [1]."
       },
       {
         "id": "q32",
         "type": "in_scope",
         "question": "How do I reclaim a rented property in England if the tenant dies without a will or executor?",
-        "answer": "To reclaim a rented property in England when a tenant dies without a will or an executor, you must follow these steps:\n\n* Understand that the tenancy is transferred temporarily to the Public Trustee [1].\n* Note that you cannot take back the property automatically, even if the tenancy was due to end [1].\n* Give written notice by posting or delivering a letter to the tenant's last known address [1]. \n* Address the written notice specifically to: “The Personal Representative of [full name of the tenant who died] of [last known address for the tenant who died]” (failing to do this could result in your application being rejected) [1].\n* Pay a £40 registration fee using a credit or debit card to get a payment reference number [1].\n* Apply to register the written notice with the Public Trustee by providing the payment reference number and an electronic copy of the written notice [1].\n\nThis is general guidance, not legal advice.",
+        "answer": "To reclaim a property in England if a tenant dies without a will or an executor, you must follow these steps:\n\n* Understand that the tenancy is transferred temporarily to the Public Trustee [1].\n* Do not attempt to take back the property automatically, even if the tenancy was due to end [1].\n* Give written notice by posting or delivering a letter to the tenant’s last known address [1].\n* Address the written notice specifically to: “The Personal Representative of [full name of the tenant who died] of [last known address for the tenant who died]” [1].\n* Pay a £40 registration fee using a credit or debit card [1].\n* Apply to register the written notice online using your payment reference number and an electronic copy of the written notice [1].\n\nThis is general guidance, not legal advice.",
         "answered": true,
-        "total_ms": 2451,
+        "total_ms": 2751,
         "llm_used": true,
         "correct": true,
         "faithful": true,
-        "reason": "The system answer accurately and completely outlines the required steps based on the provided source text."
+        "reason": "The system answer accurately captures all necessary steps and details from the source text to reclaim a property in England when a tenant dies without a will or executor."
       },
       {
         "id": "q33",
         "type": "in_scope",
         "question": "Who is legally allowed to receive rolled-up holiday pay for leave years beginning on or after 1 April 2024?",
-        "answer": "For leave years beginning on or after 1 April 2024, rolled-up holiday pay may only be offered to:\n\n* **Irregular-hours workers:** People whose paid hours in each pay period are wholly or mostly variable under the terms of their contract [1].\n* **Part-year workers:** People who are only required to work part of the year, provided there is a gap of at least a week in which they do not work and are not paid [1].\n\nEmployers cannot use rolled-up holiday pay for regular-hours workers (full- or part-time) [2]. \n\nThis is general guidance, not legal advice.",
+        "answer": "For leave years beginning on or after 1 April 2024, rolled-up holiday pay can only be offered to:\n\n* **Irregular hours workers:** People whose paid hours in each pay period are wholly or mostly variable under the terms of their contract [1].\n* **Part-year workers:** People who are only required to work part of the year, where there is a gap of at least a week in which they do not work and are not paid [1].\n\nUsing rolled-up holiday pay for anyone outside these categories breaks the law [1].\n\nThis is general guidance, not legal advice.",
         "answered": true,
-        "total_ms": 2639,
+        "total_ms": 2626,
         "llm_used": true,
         "correct": true,
         "faithful": true,
-        "reason": "The system accurately identifies irregular-hours workers and part-year workers as eligible for rolled-up holiday pay, based on the provided sources."
+        "reason": "The system accurately identifies irregular hours workers and part-year workers as those eligible for rolled-up holiday pay, fully supported by the provided sources."
       },
       {
         "id": "q34",
         "type": "in_scope",
         "question": "What conditions must be met for a tenancy to be classified as an assured periodic tenancy?",
-        "answer": "A tenancy will be classified as an assured periodic tenancy (APT) if all of the following apply:\n* The property is the tenant's main accommodation [1][2].\n* The landlord does not live in the property [1][2].\n* The tenant has their own room, though they might share a bathroom or kitchen with other tenants [1][2].\n\nA tenancy cannot be an APT if any of the following apply:\n* The landlord lives in the same accommodation [1][2].\n* The landlord is a local council [1].\n* The property is purpose-built student accommodation, the tenants are university students, and the landlord has signed up to the National Code of practice [1][2].\n* The tenancy has a fixed term of over 21 years [1][2].\n* The rent is more than £100,000 a year [1][2].\n* The rent is less than £250 a year (or less than £1,000 in London) [1][2].\n* It is a business tenancy or a tenancy of licensed premises [1][2].\n* The property is a holiday let [1][2].\n\nThis is general guidance, not legal advice.",
+        "answer": "To be classified as an assured periodic tenancy (APT), all of the following conditions must apply:\n- The property is the tenant's main accommodation [1][2].\n- The landlord does not live in the property [1][2].\n- The tenant has their own room (though they might share a bathroom or kitchen with other tenants) [1][2].\n\nAdditionally, a tenancy cannot be an APT if any of the following apply:\n- The landlord lives in the same accommodation [1][2].\n- The landlord is a local council [1].\n- The property is purpose-built student accommodation, the tenants are university students, and the landlord has signed up to the National Code of practice [1][2].\n- The tenancy has a fixed term of over 21 years [1][2].\n- The rent is more than £100,000 a year [1][2].\n- The rent is less than £250 a year (or less than £1,000 in London) [1][2].\n- It is a business tenancy or a tenancy of licensed premises [1][2].\n- The property is a holiday let [1][2].\n\nThis is general guidance, not legal advice.",
         "answered": true,
-        "total_ms": 2374,
+        "total_ms": 2714,
         "llm_used": true,
         "correct": true,
         "faithful": true,
-        "reason": "The system accurately outlines all conditions for an assured periodic tenancy based on the provided sources."
+        "reason": "The system answer correctly states the conditions required for an assured periodic tenancy and is fully supported by the provided sources."
       },
       {
         "id": "q35",
         "type": "in_scope",
         "question": "What are the different types of statutory pay and leave available to employees in the UK?",
-        "answer": "Based on the provided sources, the types of statutory pay and leave mentioned are:\n\n* **Statutory Sick Pay (SSP):** Paid when employees are off work sick, provided they meet the qualifying conditions [3][5]. It is paid for up to 28 weeks [5].\n* **Agricultural Sick Pay:** An alternative to Statutory Sick Pay for certain agricultural workers in England who were employed before 1 October 2013 [3].\n* **Statutory Maternity Leave:** Eligible employees can take up to 52 weeks of maternity leave (split into 26 weeks of 'Ordinary Maternity Leave' and 26 weeks of 'Additional Maternity Leave') [4].\n* **Statutory Maternity Pay (SMP):** Paid to eligible employees for up to 39 weeks (the first 6 weeks at 90% of average weekly earnings, and the remaining 33 weeks at £194.32 or 90% of average weekly earnings, whichever is lower) [4].\n\nThis is general guidance, not legal advice.",
+        "answer": "Based on the provided sources, the types of statutory pay and leave available include:\n\n* **Statutory Sick Pay (SSP):** Paid to eligible employees for up to 28 weeks, at either £123.25 a week or 80% of average weekly earnings (whichever is lower) [3].\n* **Agricultural Sick Pay:** May be available to agricultural workers in England employed before 1 October 2013, instead of Statutory Sick Pay [1].\n* **Statutory Maternity Leave:** Eligible employees can take up to 52 weeks of maternity leave (divided into 26 weeks of 'Ordinary Maternity Leave' and 26 weeks of 'Additional Maternity Leave') [2].\n* **Statutory Maternity Pay (SMP):** Paid to eligible employees for up to 39 weeks, consisting of 90% of average weekly earnings for the first 6 weeks, and either £194.32 or 90% of average weekly earnings (whichever is lower) for the remaining 33 weeks [2].\n\nThis is general guidance, not legal advice.",
         "answered": true,
-        "total_ms": 2265,
+        "total_ms": 2719,
         "llm_used": true,
         "correct": false,
         "faithful": true,
-        "reason": "The system answer fails to state the key facts of the reference answer, as it only lists a couple of types of pay and leave instead of the full range available in the UK."
+        "reason": "The system answer only lists Statutory Sick Pay, Agricultural Sick Pay, Statutory Maternity Leave, and Statutory Maternity Pay, missing several types of statutory pay and leave mentioned in the reference answer."
       },
       {
         "id": "q36",
         "type": "in_scope",
         "question": "How long does it usually take for an employer to receive a UK visa sponsorship refund from UKVI?",
-        "answer": "An employer usually receives a refund within 90 days of:\n* UKVI being told that the worker did not come to work for you [1].\n* The expiration date on the worker's certificate of sponsorship, if they did not use it to apply for a visa [1].\n* The date the worker's visa application is refused or withdrawn [1].\n* The date the certificate of sponsorship was assigned, if UKVI was already notified that you became a small or charitable sponsor [1].\n* The deadline for applying for an administrative review, if the worker's visa application was refused and they did not ask for one [1].\n* The administrative review being dismissed, if the worker applied for one and was unsuccessful [1].\n\nIf the refund is not paid within 90 days, you should contact UKVI [1].\n\nThis is general guidance, not legal advice.",
+        "answer": "You usually get a refund within 90 days of the following events:\n\n* Telling UKVI that the worker did not come to work for you [1].\n* The expiration date on the worker’s certificate of sponsorship, if they did not use it to apply for a visa [1].\n* The date the worker’s visa application is refused or withdrawn [1].\n* The date you assigned the certificate of sponsorship, if you had already notified UKVI that you became a small or charitable sponsor [1].\n* The deadline for applying for an administrative review, if the worker's visa application was refused and they do not ask for one [1].\n* The date the administrative review is dismissed, if the worker applied for one and was unsuccessful [1].\n\nThis is general guidance, not legal advice.",
         "answered": true,
-        "total_ms": 2570,
+        "total_ms": 4281,
         "llm_used": true,
         "correct": true,
         "faithful": true,
-        "reason": "The system answer accurately and completely states the refund timeline and conditions based on source [1]."
+        "reason": "The system answer accurately and completely states the refund timeframe and conditions based directly on the provided text."
       },
       {
         "id": "q37",
         "type": "in_scope",
         "question": "What is the purpose of the RtW supplementary code for digital right to work checks?",
-        "answer": "Based on the provided sources, the purposes of the RtW supplementary code are to:\n\n* Set out rules that digital verification services (DVS) must follow, and recommendations they can follow, in order to be certified [1.e, 4.f].\n* Help digital verification services show that they can be used by employers to fulfil their obligations and help them meet Home Office requirements and recommendations (such as regarding the level of confidence or authenticator quality) for digital right to work checks [1.f, 4.b].\n* Set rules for digital verification services conducting right to work checks specifically on holders of British and Irish passports or passport cards [0.e].\n* Support continuity by providing auditable requirements that precisely replicate, clarify, or omit previous rules from Home Office regulations and guidance for employers [0.g].\n\nThis is general guidance, not legal advice.",
+        "answer": "Based on the provided sources, the purpose of the RtW supplementary code is to:\n\n* Set out the rules that digital verification services (DVS) must follow, and the recommendations they can follow, in order to be certified against the supplementary code [1.a].\n* Assure employers who choose to conduct digital right to work checks that they can use a certified service to help meet Home Office requirements and recommendations (such as level of confidence or authenticator quality) for holders of British and Irish passports, or Irish passport cards [1.b].\n* Help digital verification services show that they can be used by employers to fulfil their compliance obligations [1.f].\n\nThis is general guidance, not legal advice.",
         "answered": true,
-        "total_ms": 2373,
+        "total_ms": 2979,
         "llm_used": true,
         "correct": true,
         "faithful": true,
-        "reason": "The system answer accurately captures the purpose of the RtW supplementary code as stated in the sources and matches the reference answer."
+        "reason": "The system answer accurately states the purpose of the RtW supplementary code as supported by the provided sources."
       },
       {
         "id": "q38",
@@ -550,35 +550,35 @@
         "question": "Where can I find Low Pay Commission reports from before 2006 regarding the National Minimum Wage?",
         "answer": "You can find Low Pay Commission reports from 1998 to 2005 on the National Archives website [1].\n\nThis is general guidance, not legal advice.",
         "answered": true,
-        "total_ms": 2261,
+        "total_ms": 2341,
         "llm_used": true,
         "correct": true,
         "faithful": true,
-        "reason": "The system answer accurately identifies that reports from 1998 to 2005 are on the National Archives website, matching the source text."
+        "reason": "The system answer accurately states that reports from 1998 to 2005 are on the National Archives website, as supported by source [1]."
       },
       {
         "id": "q39",
         "type": "in_scope",
         "question": "What happens to Statutory Maternity Pay if my business ceases to trade?",
-        "answer": "If your business ceases to trade:\n- You remain liable to pay any outstanding Statutory Maternity Pay (SMP) until the employee has received their full entitlement or their entitlement ends for some other reason [1].\n- You still have to pay SMP even if you stop trading [4].\n\nThis is general guidance, not legal advice.",
+        "answer": "If your business ceases to trade, you remain liable to pay any outstanding Statutory Maternity Pay (SMP) until:\n* Your employee has received their full entitlement [1]\n* Their entitlement ends for some other reason [1]\n\nThis applies even if you stop trading [3].\n\nThis is general guidance, not legal advice.",
         "answered": true,
-        "total_ms": 1990,
+        "total_ms": 2776,
         "llm_used": true,
         "correct": true,
         "faithful": true,
-        "reason": "The system answer accurately captures the key facts from the reference answer and is fully supported by the provided sources."
+        "reason": "The system accurately answers the question based directly on the provided sources."
       },
       {
         "id": "q40",
         "type": "in_scope",
         "question": "When do landlords need to use prescribed forms for assured tenancies?",
-        "answer": "Landlords must use prescribed forms when they want to:\n\n* Increase the rent [1].\n* Give notice asking their tenant to leave the property [1].\n* Opt out of granting an assured agricultural occupancy [1].\n* Propose changes to certain tenancies that arise by succession (which happens when the previous tenant of a Rent Act 1977 or Rent (Agriculture) Act 1976 tenancy dies) [1].\n\nThis is general guidance, not legal advice.",
+        "answer": "Landlords must use prescribed forms when they want to:\n- Increase the rent [1].\n- Give notice asking their tenant to leave the property [1].\n- Opt out of granting an assured agricultural occupancy [1].\n- Propose changes to certain tenancies that arise by succession (when the previous tenant of a Rent Act 1977 or Rent (Agriculture) Act 1976 tenancy dies) [1].\n- Ask the tribunal to determine what terms might reasonably apply for a tenancy arising by succession, if the tenant proposed changes and the landlord disagrees [1].\n- Propose changes to the terms of a statutory periodic tenancy (for landlords of social housing assured tenancies) [1].\n- Ask the tribunal to determine what terms might reasonably apply for a statutory periodic tenancy, if the tenant proposed changes and the landlord disagrees (for landlords of social housing assured tenancies) [1].\n\nThis is general guidance, not legal advice.",
         "answered": true,
-        "total_ms": 2184,
+        "total_ms": 2713,
         "llm_used": true,
         "correct": true,
         "faithful": true,
-        "reason": "The system answer accurately captures all the key facts from the reference answer and relies entirely on the provided sources."
+        "reason": "The system answer accurately captures the key facts from the reference answer and is fully supported by the provided source text."
       },
       {
         "id": "q41",
@@ -586,23 +586,23 @@
         "question": "What was the deadline for most people to apply to the EU Settlement Scheme?",
         "answer": "* The deadline for most people to apply to the EU Settlement Scheme was 30 June 2021 [1][2].\n\nThis is general guidance, not legal advice.",
         "answered": true,
-        "total_ms": 1936,
+        "total_ms": 2303,
         "llm_used": true,
         "correct": true,
         "faithful": true,
-        "reason": "The system answer accurately states the June 30, 2021 deadline found in the sources."
+        "reason": "The system answer correctly states the deadline as 30 June 2021, which is supported by the provided sources."
       },
       {
         "id": "q42",
         "type": "in_scope",
         "question": "What personal information and details do I need to give my new employer to get paid?",
-        "answer": "To get paid by your new employer, you will need to give them your personal information and details, including:\n\n* Your National Insurance number [1]\n* Your bank details [1]\n* Proof of your identity [1]\n* Details of what student loan repayment plan you are on, if you have one [1]\n* Details of what benefits you get, if any [1]\n* Your P45 (or, if you do not have a P45, you must fill in a starter checklist) [1]\n\nThis is general guidance, not legal advice.",
+        "answer": "To get paid by your new employer, you need to give them:\n\n* Your National Insurance number [1]\n* Your bank details [1]\n* Proof of your identity [1]\n* Details of what student loan repayment plan you are on (if applicable) [1]\n* Details of what benefits you receive (if any) [1]\n* Your P45 [1] (or, if you do not have one, you must fill in the starter checklist [1])\n\nThis is general guidance, not legal advice.",
         "answered": true,
-        "total_ms": 2135,
+        "total_ms": 2508,
         "llm_used": true,
         "correct": true,
         "faithful": true,
-        "reason": "The system answer covers all the necessary personal information and details to get paid as outlined in the reference answer and supported by the sources."
+        "reason": "The system answer covers all the key facts from the reference answer and includes additional correct details that are fully supported by source [1]."
       },
       {
         "id": "q43",
@@ -610,7 +610,7 @@
         "question": "Who won the cricket world cup?",
         "answer": "I don't know based on the GOV.UK pages I have indexed.",
         "answered": false,
-        "total_ms": 1110,
+        "total_ms": 1204,
         "llm_used": false
       },
       {
@@ -619,7 +619,7 @@
         "question": "How do I bake sourdough bread?",
         "answer": "I don't know based on the GOV.UK pages I have indexed.",
         "answered": false,
-        "total_ms": 1224,
+        "total_ms": 1376,
         "llm_used": false
       },
       {
@@ -628,7 +628,7 @@
         "question": "What is the capital of France?",
         "answer": "I don't know based on the GOV.UK pages I have indexed.",
         "answered": false,
-        "total_ms": 1154,
+        "total_ms": 1282,
         "llm_used": false
       },
       {
@@ -637,7 +637,7 @@
         "question": "Which laptop is best for programming?",
         "answer": "I don't know based on the GOV.UK pages I have indexed.",
         "answered": false,
-        "total_ms": 1225,
+        "total_ms": 1378,
         "llm_used": false
       },
       {
@@ -646,7 +646,7 @@
         "question": "Explain how photosynthesis works.",
         "answer": "I don't know based on the GOV.UK pages I have indexed.",
         "answered": false,
-        "total_ms": 1255,
+        "total_ms": 1395,
         "llm_used": false
       },
       {
@@ -655,7 +655,7 @@
         "question": "How do I fix a flat bicycle tyre?",
         "answer": "I don't know based on the GOV.UK pages I have indexed.",
         "answered": false,
-        "total_ms": 1236,
+        "total_ms": 1343,
         "llm_used": false
       },
       {
@@ -664,7 +664,7 @@
         "question": "Write me a poem about autumn.",
         "answer": "I don't know based on the GOV.UK pages I have indexed.",
         "answered": false,
-        "total_ms": 1063,
+        "total_ms": 1215,
         "llm_used": false
       },
       {
@@ -673,7 +673,7 @@
         "question": "How do I apply for a US work visa?",
         "answer": "I don't know based on the GOV.UK pages I have indexed.\n\nThis is general guidance, not legal advice.",
         "answered": false,
-        "total_ms": 2211,
+        "total_ms": 2420,
         "llm_used": true
       },
       {
@@ -682,7 +682,7 @@
         "question": "What is the minimum wage in Germany?",
         "answer": "I don't know based on the GOV.UK pages I have indexed.\n\nThis is general guidance, not legal advice.",
         "answered": false,
-        "total_ms": 2083,
+        "total_ms": 2711,
         "llm_used": true
       },
       {
@@ -691,7 +691,7 @@
         "question": "How much does a Canadian work permit cost?",
         "answer": "I don't know based on the GOV.UK pages I have indexed.",
         "answered": false,
-        "total_ms": 1211,
+        "total_ms": 1384,
         "llm_used": false
       }
     ]

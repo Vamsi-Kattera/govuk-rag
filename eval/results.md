@@ -32,6 +32,6 @@ In-scope median similarity 0.69 (min 0.49); out-of-scope median 0.21 (max 0.57).
 
 | Mode | Accuracy | Hallucination | False refusals | Out-of-scope refused | p50 latency | p95 latency |
 |---|---|---|---|---|---|---|
-| rerank | 95% | 5% | 2% | 100% | 2247 ms | 2703 ms |
+| rerank | 95% | 2% | 2% | 100% | 2619 ms | 2978 ms |
 
 Accuracy = correct answers / all in-scope questions (a refusal counts as wrong). Hallucination = answered questions with at least one claim not supported by the retrieved sources. Judge: Gemini, spot-checked by hand.

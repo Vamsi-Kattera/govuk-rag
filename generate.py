@@ -4,6 +4,7 @@ Setup (PowerShell):   $env:GEMINI_API_KEY="your-key"
 Run from repo root:   python generate.py "Can I work full-time on a Graduate visa?"
 """
 import os
+import re
 import sys
 import time
 
@@ -14,6 +15,7 @@ from google.genai import types
 MODEL = os.getenv("GEMINI_MODEL", "gemini-flash-lite-latest")
 MIN_SIM = float(os.getenv("MIN_SIM", "0.45"))  # chosen from the Day 4 gate sweep
 TOP_K = int(os.getenv("TOP_K", "5"))
+PROMPT_VERSION = "v2-page-citations"  # bump when the prompt or context layout changes (keys the eval cache)
 NO_ANSWER = "I don't know based on the GOV.UK pages I have indexed."
 
 SYSTEM_PROMPT = f"""You are an assistant that answers questions about UK government guidance
@@ -38,11 +40,37 @@ class RagAssistant:
         self.client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
 
     @staticmethod
-    def _build_context(hits: list[dict]) -> str:
-        blocks = []
-        for n, h in enumerate(hits, start=1):
-            blocks.append(f"[{n}] {h['title']} ({h['url']})\n{h['text']}")
+    def _group_by_page(hits: list[dict]) -> list[dict]:
+        """Merge chunks of the same page (document order), pages in first-appearance order."""
+        pages: dict[str, dict] = {}
+        for h in hits:
+            p = pages.setdefault(
+                h["url"],
+                {"title": h["title"], "url": h["url"], "updated": h.get("updated"), "chunks": []},
+            )
+            try:
+                order = int(str(h["id"]).rsplit("-", 1)[-1])
+            except (KeyError, ValueError):
+                order = 0
+            body = h["text"].removeprefix(h["title"] + "\n\n")
+            p["chunks"].append((order, body))
+        out = []
+        for p in pages.values():
+            p["body"] = "\n\n".join(b for _, b in sorted(p["chunks"], key=lambda c: c[0]))
+            out.append(p)
+        return out
+
+    @staticmethod
+    def _build_context(pages: list[dict]) -> str:
+        blocks = [f"[{n}] {p['title']} ({p['url']})\n{p['body']}" for n, p in enumerate(pages, start=1)]
         return "\n\n---\n\n".join(blocks)
+
+    @staticmethod
+    def _cited(answer: str) -> set[int]:
+        nums: set[int] = set()
+        for group in re.findall(r"\[([\d,\s]+)\]", answer):
+            nums.update(int(x) for x in re.findall(r"\d+", group))
+        return nums
 
     def ask(self, question: str, mode: str = os.getenv("RETRIEVAL_MODE", "rerank")) -> dict:
         t0 = time.perf_counter()
@@ -63,7 +91,8 @@ class RagAssistant:
                 "total_ms": round((time.perf_counter() - t0) * 1000),
             }
 
-        prompt = f"Sources:\n\n{self._build_context(hits)}\n\nQuestion: {question}"
+        pages = self._group_by_page(hits)
+        prompt = f"Sources:\n\n{self._build_context(pages)}\n\nQuestion: {question}"
         resp = self.client.models.generate_content(
             model=MODEL,
             contents=prompt,
@@ -75,19 +104,21 @@ class RagAssistant:
         if not answer:  # blocked or empty response: treat it as "no answer", never as an answer
             answer = NO_ANSWER
 
-        seen, sources = set(), []
-        for n, h in enumerate(hits, start=1):
-            if h["url"] not in seen:
-                seen.add(h["url"])
-                sources.append(
-                    {"n": n, "title": h["title"], "url": h["url"], "updated": h["updated"]}
-                )
+        cited = self._cited(answer)
+        sources = [
+            {"n": n, "title": p["title"], "url": p["url"], "updated": p["updated"]}
+            for n, p in enumerate(pages, start=1)
+            if n in cited
+        ] or [
+            {"n": n, "title": p["title"], "url": p["url"], "updated": p["updated"]}
+            for n, p in enumerate(pages, start=1)
+        ]  # no parsable citations: show every page the model saw
 
         answered = NO_ANSWER not in answer
         return {
             "answer": answer,
             "answered": answered,
-            "contexts": [h["text"] for h in hits],
+            "contexts": [p["body"] for p in pages],
             "best_similarity": round(best, 3),
             "sources": sources if answered else [],
             "retrieve_ms": round(t_retrieve * 1000),
