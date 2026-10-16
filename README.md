@@ -1,6 +1,6 @@
----
+﻿---
 title: GOV.UK RAG Assistant
-emoji: 🇬🇧
+emoji: 📚
 sdk: docker
 app_port: 7860
 pinned: false
