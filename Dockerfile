@@ -6,7 +6,9 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     ANONYMIZED_TELEMETRY=False \
     GEMINI_MODEL=gemini-flash-lite-latest \
     MIN_SIM=0.45 \
-    RETRIEVAL_MODE=rerank
+    RETRIEVAL_MODE=rerank \
+    API_URL=http://127.0.0.1:8000 \
+    RATE_LIMIT_PER_MIN=30
 
 WORKDIR /app
 
@@ -16,7 +18,7 @@ RUN pip install --no-cache-dir torch --index-url https://download.pytorch.org/wh
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY api.py service_utils.py generate.py retriever.py index.py ./
+COPY api.py service_utils.py generate.py retriever.py index.py ui.py start.py ./
 COPY data/chunks.jsonl data/chunks.jsonl
 
 # Build the vector index and download both models at build time,
@@ -24,12 +26,13 @@ COPY data/chunks.jsonl data/chunks.jsonl
 RUN python index.py \
  && python -c "from sentence_transformers import CrossEncoder; CrossEncoder('cross-encoder/ms-marco-MiniLM-L-6-v2')"
 
-RUN useradd --create-home app && chown -R app /app
+RUN useradd --create-home --uid 1000 app && chown -R app /app
 USER app
 
-EXPOSE 8000
+EXPOSE 7860
 HEALTHCHECK --interval=30s --timeout=5s --start-period=90s --retries=3 \
   CMD python -c "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')" || exit 1
 
-# One worker: every worker would load its own copy of the models into memory.
-CMD ["uvicorn", "api:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "1"]
+# start.py runs the API (port 8000, internal) and the Streamlit UI (port 7860, public).
+# One API worker: every worker would load its own copy of the models into memory.
+CMD ["python", "start.py"]
