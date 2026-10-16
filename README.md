@@ -16,7 +16,7 @@ Ask a question about UK visas, right to work, employment rights or benefits and 
 
 > Not legal advice. Answers come only from the ~130 GOV.UK pages I indexed and may be out of date.
 
-<!-- Add a screenshot or GIF here: docs/demo.gif -->
+![Demo: a cited answer with its sources](docs/demo.jpeg)
 
 ## What it does
 
