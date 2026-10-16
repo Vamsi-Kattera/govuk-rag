@@ -18,6 +18,9 @@ RUN pip install --no-cache-dir torch --index-url https://download.pytorch.org/wh
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Always take the newest Gemini SDK: older versions reject newer-style API keys with 401 ACCESS_TOKEN_TYPE_UNSUPPORTED.
+RUN pip install --no-cache-dir -U google-genai
+
 COPY api.py service_utils.py generate.py retriever.py index.py ui.py start.py ./
 COPY data/chunks.jsonl data/chunks.jsonl
 
