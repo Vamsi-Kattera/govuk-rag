@@ -83,7 +83,7 @@ The gate alone cannot separate near-topic questions (the German minimum-wage que
 
 Answer model and judge: `gemini-flash-lite-latest`. Latency covers requests that called the LLM, measured locally on a CPU laptop in a quiet period; in busier periods on the Gemini free tier I measured a p50 of 4-7 s and a p95 of about 9.5 s, so treat it as a range.
 
-**Known failures:** (1) "Can I work full-time on a Graduate visa?" is refused: the page says you can work in most jobs but never mentions hours, and the model would not give a partial answer. (2) A "list all the types of statutory pay and leave" question gets an incomplete list. (3) The judge flagged one answer (travel while waiting for a Graduate visa decision) for citing a source that did not contain the rule.
+**Known failures:** (1) "Can I work full-time on a Graduate visa?" is refused: the page says you can work in most jobs but never mentions hours, and the model would not give a partial answer. (2) A "list all the types of statutory pay and leave" question gets an incomplete list. (3) The judge flagged one answer (travel while waiting for a Graduate visa decision) for citing a source that did not contain the rule. (4) "Can I work 20 hours a week on a Student visa?" is refused, correctly: the GOV.UK Student visa guide says work limits depend on your course and term time but does not state the hours, so the answer is not in the indexed pages.
 
 **Caveats:** the same model family writes and judges the answers, which tends to be generous, so I spot-checked samples by hand. The test set is small and its questions come from the indexed chunks, so it favours answerable questions. Treat the numbers as a regression test, not a benchmark.
 
@@ -181,6 +181,7 @@ docker run -p 7860:7860 -e GEMINI_API_KEY=your-key govuk-rag
 - Retrieval runs a cross-encoder on CPU, so expect a few seconds per question on free hosting.
 - Depends on the Gemini free tier, which can be slow or rate-limited at busy times.
 - General guidance only, not legal advice.
+- Very short or fragmentary questions with no topic words (for example "can work 20 hours while studying") can score just under the similarity     gate and get "I don't know". Full sentences that name the visa or topic work better.
 
 ## Data and licence
 
